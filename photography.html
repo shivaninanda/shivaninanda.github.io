@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Nanda - Photography</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        main h1 {
+            font-size: 2.5rem;
+            text-align: center;
+        }
+
+        main p {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        body {
+            background-color: #f8bcd0;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #f8bcd0;
+        }
+
+        header .nav-toggle {
+            display: none;
+        }
+        
+        @media (max-width: 768px) {
+            header .nav-toggle {
+                display: block;
+                font-size: 2rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #ef6292;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 8px 8px;
+            }
+
+            header nav ul li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            header nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            header nav ul li a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+                color: white;
+                border-radius: 0;
+            }
+
+            header.nav-active ul {
+                display: flex;
+                animation: dropdown-slide 0.3s ease-in-out forwards;
+            }
+        }
+
+        @keyframes dropdown-slide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .main-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .photo-collage {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+
+        .photo-collage img {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .photo-collage img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0);
+            z-index: 1;
+        }
+
+        footer {
+            background-color: #ef6292;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            footer p {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SN-whitetext.png" alt="Shivani Nanda Logo">
+            <span>Shivani Nanda</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="campus-involvement.html">Involvement</a></li>
+                <li><a href="coursework.html">Coursework</a></li>
+                <li><a href="online-courses.html">Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="reading.html">What I'm Reading</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-container">
+            <h1>Photography</h1>
+            <p>Capturing life, one click at a time. Take a peek through my lens!</p>
+            <div class="photo-collage">
+                <a href="#img1"><img src="photography/3CBAFD20-0346-4E4E-BC57-51F28E18F599.jpg" alt="Photo 1"></a>
+                <a href="#img2"><img src="photography/59A4412F-7C22-4390-8EB1-F1422F266839.jpeg" alt="Photo 2"></a>
+                <a href="#img3"><img src="photography/971adfa2-0ef1-44df-a7c6-94dcc718b42d.jpg" alt="Photo 3"></a>
+                <a href="#img4"><img src="photography/4460DA90-2CCC-47B0-91F5-6FE81004C653.jpg" alt="Photo 4"></a>
+                <a href="#img5"><img src="photography/2132853C-A278-4ACC-9975-EF57138CD2C6.jpeg" alt="Photo 5"></a>
+                <a href="#img6"><img src="photography/A4E1E4C5-D94F-4138-BB02-5B5AA922A462 2.jpeg" alt="Photo 6"></a>
+                <a href="#img12"><img src="photography/E9119966-7D5A-4FDB-A34B-E509D1FF96B5.jpeg" alt="Photo 12"></a>
+                <a href="#img7"><img src="photography/DSC00287.jpg" alt="Photo 7"></a>
+                <a href="#img8"><img src="photography/DSC00314.jpg" alt="Photo 8"></a>
+                <a href="#img9"><img src="photography/DSC00322.jpg" alt="Photo 9"></a>
+                <a href="#img10"><img src="photography/DSC00325.jpg" alt="Photo 10"></a>
+                <a href="#img41"><img src="photography/DSC00405.jpg" alt="Photo 11"></a>
+                <a href="#img11"><img src="photography/texture.jpg" alt="Photo 41"></a>
+                <a href="#img42"><img src="photography/shallowdepthoffield.jpg" alt="Photo 42"></a>
+                <a href="#img14"><img src="photography/FFC7CA7F-E384-441A-B89F-8A3F79AFBD2E.jpeg" alt="Photo 14"></a>
+                <a href="#img15"><img src="photography/IMG_1207.jpg" alt="Photo 15"></a>
+                <a href="#img16"><img src="photography/IMG_1335 2.jpg" alt="Photo 16"></a>
+                <a href="#img17"><img src="photography/IMG_1682 2.jpg" alt="Photo 17"></a>
+                <a href="#img19"><img src="photography/IMG_2099.jpg" alt="Photo 19"></a>
+                <a href="#img20"><img src="photography/IMG_2279 3.jpg" alt="Photo 20"></a>
+                <a href="#img21"><img src="photography/IMG_3223 2.jpg" alt="Photo 21"></a>
+                <a href="#img22"><img src="photography/IMG_3273.jpg" alt="Photo 22"></a>
+                <a href="#img29"><img src="photography/IMG_8115.jpg" alt="Photo 29"></a>
+                <a href="#img23"><img src="photography/IMG_3182.JPG" alt="Photo 23"></a>
+                <a href="#img24"><img src="photography/IMG_4847.jpg" alt="Photo 24"></a>
+                <a href="#img26"><img src="photography/IMG_6410.jpg" alt="Photo 26"></a>
+                <a href="#img27"><img src="photography/IMG_7246.jpg" alt="Photo 27"></a>
+                <a href="#img28"><img src="photography/IMG_8105.jpg" alt="Photo 28"></a>
+                <a href="#img43"><img src="photography/FC9DBD14-D30B-4BEA-A52A-E9FED869FFB4.jpeg" alt="Photo 43"></a>
+                <a href="#img18"><img src="photography/IMG_1683.jpg" alt="Photo 18"></a>
+                <a href="#img23"><img src="photography/IMG_4590.jpg" alt="Photo 23"></a>
+                <a href="#img25"><img src="photography/IMG_5812.jpg" alt="Photo 25"></a>
+                <a href="#img32"><img src="photography/IMG_8042.jpg" alt="Photo 32"></a>
+                <a href="#img44"><img src="photography/IMG_8333.jpg" alt="Photo 44"></a>
+                <a href="#img45"><img src="photography/IMG_2564.HEIC" alt="Photo 45"></a>
+                <a href="#img30"><img src="photography/IMG_8535.jpg" alt="Photo 30"></a>
+                <a href="#img31"><img src="photography/IMG_8717 2.jpg" alt="Photo 31"></a>
+                <a href="#img35"><img src="photography/IMG_9430.jpg" alt="Photo 35"></a>
+                <a href="#img36"><img src="photography/IMG_9510.jpg" alt="Photo 36"></a>
+                <a href="#img37"><img src="photography/IMG_9514.jpg" alt="Photo 37"></a>
+                <a href="#img38"><img src="photography/IMG_9641.jpg" alt="Photo 38"></a>
+                <a href="#img40"><img src="photography/tempImagelLL6le.jpg" alt="Photo 40"></a>
+            </div>
+
+            <div id="img1" class="lightbox"><a href="#" class="close"></a><img src="photography/3CB9AFD20-0346-4E4E-BC57-51F28E18F599.jpg"></div>
+            <div id="img2" class="lightbox"><a href="#" class="close"></a><img src="photography/59A4412F-7C22-4390-8EB1-F1422F266839.jpeg"></div>
+            <div id="img3" class="lightbox"><a href="#" class="close"></a><img src="photography/971adfa2-0ef1-44df-a7c6-94dcc718b42d.jpg"></div>
+            <div id="img4" class="lightbox"><a href="#" class="close"></a><img src="photography/4460DA90-2CCC-47B0-91F5-6FE81004C653.jpg"></div>
+            <div id="img5" class="lightbox"><a href="#" class="close"></a><img src="photography/2132853C-A278-4ACC-9975-EF57138CD2C6.jpeg"></div>
+            <div id="img6" class="lightbox"><a href="#" class="close"></a><img src="photography/A4E1E4C5-D94F-4138-BB02-5B5AA922A462 2.jpeg"></div>
+            <div id="img7" class="lightbox"><a href="#" class="close"></a><img src="photography/DSC00287.jpg"></div>
+            <div id="img8" class="lightbox"><a href="#" class="close"></a><img src="photography/DSC00314.jpg"></div>
+            <div id="img9" class="lightbox"><a href="#" class="close"></a><img src="photography/DSC00322.jpg"></div>
+            <div id="img10" class="lightbox"><a href="#" class="close"></a><img src="photography/DSC00325.jpg"></div>
+            <div id="img11" class="lightbox"><a href="#" class="close"></a><img src="photography/DSC00405.jpg"></div>
+            <div id="img12" class="lightbox"><a href="#" class="close"></a><img src="photography/E9119966-7D5A-4FDB-A34B-E509D1FF96B5.jpeg"></div>
+            <div id="img13" class="lightbox"><a href="#" class="close"></a><img src="photography/FC9DBD14-D30B-4BEA-A52A-E9FED869FFB4.jpeg"></div>
+            <div id="img14" class="lightbox"><a href="#" class="close"></a><img src="photography/FFC7CA7F-E384-441A-B89F-8A3F79AFBD2E.jpeg"></div>
+            <div id="img15" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_1207.jpg"></div>
+            <div id="img16" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_1335 2.jpg"></div>
+            <div id="img17" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_1682 2.jpg"></div>
+            <div id="img18" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_1683.jpg"></div>
+            <div id="img19" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_2099.jpg"></div>
+            <div id="img20" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_2279 3.jpg"></div>
+            <div id="img21" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_3223 2.jpg"></div>
+            <div id="img22" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_3273.jpg"></div>
+            <div id="img23" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_3182.JPG"></div>
+            <div id="img24" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_4847.jpg"></div>
+            <div id="img25" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_5812.jpg"></div>
+            <div id="img26" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_6410.jpg"></div>
+            <div id="img27" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_7246.jpg"></div>
+            <div id="img28" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_8105.jpg"></div>
+            <div id="img29" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_8115.jpg"></div>
+            <div id="img30" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_8535.jpg"></div>
+            <div id="img31" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_8717 2.jpg"></div>
+            <div id="img32" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9200 2.jpg"></div>
+            <div id="img33" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9421 2.jpg"></div>
+            <div id="img34" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9427.jpg"></div>
+            <div id="img35" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9430.jpg"></div>
+            <div id="img36" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9510.jpg"></div>
+            <div id="img37" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9514.jpg"></div>
+            <div id="img38" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9641.jpg"></div>
+            <div id="img39" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_9659.jpg"></div>
+            <div id="img40" class="lightbox"><a href="#" class="close"></a><img src="photography/templmageILLL6Ie.jpg"></div>
+            <div id="img41" class="lightbox"><a href="#" class="close"></a><img src="photography/texture.jpg"></div>
+            <div id="img42" class="lightbox"><a href="#" class="close"></a><img src="photography/shallowdepthoffield.jpg"></div>
+            <div id="img32" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_8042.jpg"></div>
+            <div id="img44" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_8333.jpg"></div>
+            <div id="img45" class="lightbox"><a href="#" class="close"></a><img src="photography/IMG_2564.HEIC"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="mailto:nandash@iu.edu" title="Send Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/shivaninanda2027/" target="_blank" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p>Thank you for viewing my portfolio! Please feel free to email me or connect with me on LinkedIn!</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.createElement('button');
+            navToggle.classList.add('nav-toggle');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            const header = document.querySelector('header');
+            const nav = header.querySelector('nav');
+            header.appendChild(navToggle);
+            navToggle.addEventListener('click', () => {
+                header.classList.toggle('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>

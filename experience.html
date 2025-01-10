@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Nanda - Experience</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        main h1 {
+            font-size: 250%;
+        }
+
+        body {
+            background-color: #f8bcd0;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #f8bcd0;
+        }
+
+        header .nav-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header .nav-toggle {
+                display: block;
+                font-size: 2rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #ef6292;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 8px 8px;
+            }
+
+            header nav ul li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            header nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            header nav ul li a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+                color: white;
+                border-radius: 0;
+            }
+
+            header.nav-active ul {
+                display: flex;
+                animation: dropdown-slide 0.3s ease-in-out forwards;
+            }
+        }
+
+        @keyframes dropdown-slide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .main-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .job-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .job {
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: calc(90% - 1rem);
+            box-sizing: border-box;
+        }
+
+        .skills-button {
+            background-color: #ef6292;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+
+        .skills-button:hover {
+            background-color: #f8bcd0;
+        }
+
+        footer {
+            background-color: #ef6292;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #FB8DA0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-container {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            .intro h1 {
+                font-size: 2.2rem;
+            }
+            
+            footer p {
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SN-whitetext.png" alt="Shivani Nanda Logo">
+            <span>Shivani Nanda</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="campus-involvement.html">Involvement</a></li>
+                <li><a href="coursework.html">Coursework</a></li>
+                <li><a href="online-courses.html">Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="reading.html">What I'm Reading</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="experience" class="main-container">
+            <h1>Experience</h1>
+            <p>Explore the professional experiences that shape my career journey!</p>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="mailto:nandash@iu.edu" title="Send Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/shivaninanda2027/" target="_blank" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p>Thank you for viewing my portfolio! Please feel free to email me or connect with me on LinkedIn!</p>
+    </footer>
+
+    <script>
+        fetch('boxes.json')
+            .then(response => response.json())
+            .then(data => {
+                const experienceData = data.experience;
+
+                function generateJobHTML(job) {
+                    const skillsHTML = job.skills.map(skill => `<button class="skills-button">${skill}</button>`).join('');
+                    return `
+                        <div class="job">
+                            <h3>${job.title}</h3>
+                            <p><strong>Date:</strong> ${job.date}</p>
+                            <div class="job-description">
+                                <p><strong>Description:</strong> ${job.description}</p>
+                            </div>
+                            <div class="skills-buttons">${skillsHTML}</div>
+                        </div>
+                    `;
+                }
+
+                const experienceContainer = document.getElementById('experience');
+                experienceData.forEach(job => {
+                    experienceContainer.innerHTML += generateJobHTML(job);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.createElement('button');
+            navToggle.classList.add('nav-toggle');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            const header = document.querySelector('header');
+            const nav = header.querySelector('nav');
+            header.appendChild(navToggle);
+            navToggle.addEventListener('click', () => {
+                header.classList.toggle('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>

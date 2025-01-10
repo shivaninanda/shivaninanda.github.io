@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Nanda - Coursework</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        main h1 {
+            font-size: 250%;
+        }
+
+        main p {
+            padding-bottom: 20px;
+        }
+
+        #spring_2024 h2, #fall_2023 h2 {
+            padding: 1rem 0;
+            margin-bottom: 1rem;
+        }
+
+        body {
+            background-color: #f8bcd0;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #f8bcd0;
+        }
+
+        header .nav-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header .nav-toggle {
+                display: block;
+                font-size: 2rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #ef6292;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 8px 8px;
+            }
+
+            header nav ul li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            header nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            header nav ul li a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+                color: white;
+                border-radius: 0;
+            }
+
+            header.nav-active ul {
+                display: flex;
+                animation: dropdown-slide 0.3s ease-in-out forwards;
+            }
+        }
+
+        @keyframes dropdown-slide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        main {
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .mini-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .mini-nav ul li {
+            margin: 0 1rem;
+        }
+
+        .mini-nav ul li a {
+            text-decoration: none;
+            color: #ef6292;
+            font-size: 1.1rem;
+        }
+
+        .mini-nav ul li a:hover {
+            color: #ea3473;
+        }
+
+        .course-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+
+        .course {
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            padding: 1.5rem;
+            border-radius: 8px;
+            width: calc(45% - 1rem);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .course h3 {
+            color: #ef6292;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .skills-button {
+            background-color: #ef6292;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-right: 5px;
+            margin-top: 1rem;
+        }
+
+        .skills-button:hover {
+            background-color: #ea3473;
+        }
+
+        footer {
+            background-color: #ef6292;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #FB8DA0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            main {
+                width: 90%;
+                padding: 1rem;
+            }
+
+            .course {
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .mini-nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            .mini-nav ul li {
+                margin: 1rem 0;
+            }
+            footer p {
+                padding: 1rem;
+            }
+        }
+        #spring_2024 h2, #fall_2023 h2, #spring_2025 h2, #fall_2024 h2 {
+            padding: 0.5rem 0;
+            margin: 2rem 0 1rem;
+            font-size: 1.75rem;
+            font-weight: bold;
+            text-align: left;
+            color: #ef6292;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SN-whitetext.png" alt="Shivani Nanda Logo">
+            <span>Shivani Nanda</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="campus-involvement.html">Involvement</a></li>
+                <li><a href="coursework.html">Coursework</a></li>
+                <li><a href="online-courses.html">Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="reading.html">What I'm Reading</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav class="mini-nav">
+            <h1>Coursework</h1>
+            <p>Scroll down or select a semester to explore the courses I completed!</p>
+            <ul>
+                <li><a href="#fall_2024">Fall 2024</a></li>
+                <li><a href="#spring_2024">Spring 2024</a></li>
+                <li><a href="#fall_2023">Fall 2023</a></li>
+            </ul>
+        </nav>
+
+        <section id="fall_2024">
+            <h2>Fall 2024</h2>
+            <div class="course-container" id="fall_2024_courses"></div>
+        </section>
+
+        <section id="spring_2024">
+            <h2>Spring 2024</h2>
+            <div class="course-container" id="spring_2024_courses"></div>
+        </section>
+
+        <section id="fall_2023">
+            <h2>Fall 2023</h2>
+            <div class="course-container" id="fall_2023_courses"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="mailto:nandash@iu.edu" title="Send Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/shivaninanda2027/" target="_blank" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p>Thank you for viewing my portfolio! Please feel free to email me or connect with me on LinkedIn!</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('nav.mini-nav a').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        fetch('boxes.json')
+            .then(response => response.json())
+            .then(data => {
+                const fall2024Courses = data.courses.fall_2024;
+                const spring2024Courses = data.courses.spring_2024;
+                const fall2023Courses = data.courses.fall_2023;
+
+                function generateCourseHTML(course) {
+                    const skillsHTML = course.skills.map(skill => `<button class="skills-button">${skill}</button>`).join('');
+                    return `
+                        <div class="course">
+                            <h3>${course.name}</h3>
+                            <p><strong>Semester:</strong> ${course.semester}</p>
+                            <p><strong>Description:</strong> ${course.description}</p>
+                            <div class="skills-buttons">${skillsHTML}</div>
+                        </div>
+                    `;
+                }
+
+                const fall2024Container = document.getElementById('fall_2024_courses');
+                fall2024Courses.forEach(course => {
+                    fall2024Container.innerHTML += generateCourseHTML(course);
+                });
+
+                const spring2024Container = document.getElementById('spring_2024_courses');
+                spring2024Courses.forEach(course => {
+                    spring2024Container.innerHTML += generateCourseHTML(course);
+                });
+
+                const fall2023Container = document.getElementById('fall_2023_courses');
+                fall2023Courses.forEach(course => {
+                    fall2023Container.innerHTML += generateCourseHTML(course);
+                });
+            })
+            .catch(error => console.error('Error fetching data:', error));
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.createElement('button');
+            navToggle.classList.add('nav-toggle');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            const header = document.querySelector('header');
+            const nav = header.querySelector('nav');
+            header.appendChild(navToggle);
+            navToggle.addEventListener('click', () => {
+                header.classList.toggle('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>

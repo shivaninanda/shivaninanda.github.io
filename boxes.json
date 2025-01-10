@@ -1,0 +1,426 @@
+{
+    "experience": [
+        {
+            "title": "Undergraduate Student Researcher @ Data Science and Artificial Intelligence Lab | Bloomington, IN",
+            "date": "May 2024 - Present",
+            "description": "I conducted comprehensive vulnerability assessments of open-source software platforms, utilizing artificial intelligence to identify and analyze security risks from repositories like GitHub and Hugging Face. I designed interactive data visualizations in Tableau to highlight critical cybersecurity threats, uncover emerging trends, and identify patterns. These insights empowered teams to take proactive measures, strengthen security practices, and implement effective risk mitigation strategies.",
+            "skills": [
+                "Artificial Intelligence",
+                "Cybersecurity",
+                "Data Visualization",
+                "Tableau",
+                "Research"
+            ]
+        },
+        {
+            "title": "Data Analyst and Consulting Intern @ Strategic Results | Rockville, MD",
+            "date": " May 2024 - August 2024",
+            "description": "I optimized decision-making processes for clients by applying big data analytics and comprehensive statistical analysis, driving strategic planning, operational efficiency, and improved organizational outcomes. Collaborating closely with senior consultants and project managers, I delivered tailored acquisition services and developed innovative strategies for business-to-government contracts, enhancing client engagement and streamlining project execution.",
+            "skills": [
+                "Data Analysis",
+                "Statistical Analysis",
+                "Technology Consulting",
+                "Strategic Consulting",
+                "Business Development"
+            ]
+        },
+        {
+            "title": "Research Intern @ Robotics Algorithms & Autonomous Systems Lab | University of Maryland",
+            "date": "May 2021 - December 2022",
+            "description": "I designed a cost-effective robotic medical assistance system, utilizing open-source software and AI-driven semantic mapping to address complex healthcare challenges and meet diverse patient needs. By coordinating efforts across multidisciplinary teams, I integrated advanced technologies, streamlined processes, and demonstrated strong project management skills, fostering innovation in a dynamic and collaborative environment.",
+            "skills": [
+                "Robotics",
+                "Artificial Intelligence",
+                "Research"
+            ]
+        }
+    ],
+    "involvement": [
+        {
+            "title": "Director of Pledge Education @ Kappa Omega Alpha – Business Fraternity | Bloomington, IN",
+            "date": "December 2024 - Present",
+            "description": "I led the creation and execution of a semester-long pledgeship program, organizing 30+ events focused on professional development, community engagement, and brotherhood. I designed innovative recruitment themes, workshops, and mentorship initiatives, while managing event logistics and fostering active participation among pledges. Additionally, I implemented systems to ensure accountability and growth, engaging active members in mentorship and leadership roles to strengthen the program's impact.",
+            "skills": [
+                "Networking",
+                "Professional Development",
+                "Business Law"
+            ]
+        }, 
+        {
+            "title": "President @ Data Visualization at IU | Bloomington, IN",
+            "date": "November 2024 - Present",
+            "description": "I set the strategic vision for the organization, mentored the executive board, and drove the execution of high-impact events that boosted member engagement and professional growth. I built partnerships and delivered exclusive workshops that positioned the organization as a leader in data visualization on campus.",
+            "skills": [
+                "Data Visualization",
+                "Leadership",
+                "Strategic Planning",
+                "Event Management"
+            ]
+        },
+        {
+            "title": "Active Member @ Kappa Omega Alpha – Business Fraternity | Bloomington, IN",
+            "date": "September 2024 - Present",
+            "description": "I drove professional development by actively participating in networking events and legal workshops to strengthen my expertise in career preparation and ethics. I led initiatives to enhance the rush process, recruit new members, and implement strategies that expanded the fraternity’s campus presence.",
+            "skills": [
+                "Networking",
+                "Professional Development",
+                "Business Law",
+                "Legal Analysis"
+            ]
+        },
+        {
+            "title": "President @ Business Analytics Club at Kelley | Bloomington, IN",
+            "date": "June 2024 - Present",
+            "description": "I led BACK by transforming it into a vibrant hub for analytics enthusiasts, organizing workshops, hosting speaker events, and building connections through networking. I am currently spearheading Kelley’s first-ever hackathon and designing hands-on training programs to equip members with advanced analytics and machine learning tools like Python, R, and Tableau.",
+            "skills": [
+                "Leadership",
+                "Machine Learning",
+                "Advanced Analytics",
+                "Python",
+                "R",
+                "SQL",
+                "Tableau",
+                "Event Management"
+            ]
+        },
+        {
+            "title": "Vice President of Technology @ Data Visualization at IU | Bloomington, IN",
+            "date": "December 2023 - November 2024",
+            "description": "I taught comprehensive data visualization lessons, equipping over 100 students with advanced skills in R, Tableau, and other data visualization tools. I designed and developed the organization’s website using HTML, CSS, and JavaScript, focusing on responsive design to enhance user experience and accessibility",
+            "skills": [
+                "R",
+                "Tableau",
+                "Web Development",
+                "HTML5, CSS, and JavaScript"
+            ]
+        },
+        {
+            "title": "Vice President of Diversity, Equity, and Inclusion @ The Women’s Network | Bloomington, IN",
+            "date": "January 2024 - Present",
+            "description": "I drove women’s professional development by leading workshops and fostering discussions that created an inclusive and supportive environment. I executed innovative DEI-focused Instagram campaigns to strengthen community engagement and inspire meaningful connections among members.",
+            "skills": [
+                "Diversity, Equity, Inclusion, Justice, and Belonging",
+                "Professional Development"
+            ]
+        },
+        {
+            "title": "Consulting Associate @ Nitara | Bloomington, IN",
+            "date": "September 2023 - Present",
+            "description": "I collaborated with international organizations to spearhead cross-cultural business development, specializing in financial, technology, and marketing consulting. I crafted strategic solutions, implemented risk mitigation frameworks, and fostered global networks that empowered Asian startups and NGOs to achieve sustainable growth and long-term success.",
+            "skills": [
+                "Financial Consulting",
+                "Marketing Consulting",
+                "Technology Consulting",
+                "Risk Mitigation",
+                "Global Market Analysis"
+            ]
+        }
+    ],
+    "online_courses": [
+        {
+            "name": "Excel and ChatGPT: Data Analysis Power Tips",
+            "provider": "LinkedIn",
+            "credential_id": "",
+            "issued": "Aug 2024",
+            "skills": [
+                "Statistics",
+                "Artificial Intelligence",
+                "Microsoft Excel"
+            ]
+        },
+        {
+            "name": "Bloomberg Finance Fundamentals",
+            "provider": "Bloomberg",
+            "credential_id": "NRJk9a6FUhwr1rQie9oEEfie",
+            "issued": "Jun 2024",
+            "skills": [
+                "Investment",
+                "Portfolio Management"
+            ]
+        },
+        {
+            "name": "Introduction to Portfolio Construction and Analysis with Python",
+            "provider": "EDHEC Business School",
+            "credential_id": "",
+            "issued": "Jun 2024",
+            "skills": [
+                "Python",
+                "Portfolio Performance Analysis",
+                "Portfolio Construction"
+            ]
+        },
+        {
+            "name": "R Programming Fundamentals",
+            "provider": "Stanford Online",
+            "credential_id": "99d2fca6577943308533b7631ca506c2",
+            "issued": "Dec 2023",
+            "skills": ["R", "Data Visualization"]
+        },
+        {
+            "name": "Microsoft Excel",
+            "provider": "Wall Street Prep",
+            "credential_id": "83379515",
+            "issued": "Oct 2023",
+            "skills": [
+                "Microsoft Excel",
+                "Statistics"
+            ]
+        },
+        {
+            "name": "Microsoft Access Essential Training (Office 2021/LTSC)",
+            "provider": "LinkedIn",
+            "credential_id": "ATmZiL2xZTNnDsmwBw6U73RvKs0V",
+            "issued": "Jun 2023",
+            "skills": [
+                "Microsoft Access",
+                "Statistics"
+            ]
+        },
+        {
+            "name": "Programming Fundamentals",
+            "provider": "Duke University",
+            "credential_id": "WV6T4NFXWR9M",
+            "issued": "Aug 2020",
+            "skills": ["C",
+            "Data Structure and Algorithms"]
+        },
+        {
+            "name": "Introduction to Cyber Attacks",
+            "provider": "New York University",
+            "credential_id": "UMZJNDCK3WFQ",
+            "issued": "Jun 2020",
+            "skills": ["Cybersecurity"]
+        },
+        {
+            "name": "Introduction to CSS3",
+            "provider": "University of Michigan",
+            "credential_id": "CD64HENJZTTQ",
+            "issued": "Apr 2019",
+            "skills": [
+                "HTML5, CSS, and JavaScript"
+            ]
+        },
+        {
+            "name": "Interactivity with JavaScript",
+            "provider": "University of Michigan",
+            "credential_id": "KWG89Y3RDEGS",
+            "issued": "Mar 2019",
+            "skills": [
+                "HTML5, CSS, and JavaScript"
+            ]
+        },
+        {
+            "name": "Introduction To Swift Programming",
+            "provider": "University of Toronto",
+            "credential_id": "A3Y7YAWKMM3D",
+            "issued": "Jan 2019",
+            "skills": ["App Development"]
+        },
+        {
+            "name": "Introduction to HTML5",
+            "provider": "University of Michigan",
+            "credential_id": "7YYU9ELMPWVB",
+            "issued": "Jan 2019",
+            "skills": ["HTML5, CSS, and JavaScript"]
+        },
+        {
+            "name": "An Introduction to Interactive Programming in Python (Part 2)",
+            "provider": "Rice University",
+            "credential_id": "4MWJTN965ZWX",
+            "issued": "Sep 2018",
+            "skills": [
+                "Python",
+                "Data Structure and Algorithms"
+            ]
+        },
+        {
+            "name": "An Introduction to Interactive Programming in Python (Part 1)",
+            "provider": "Rice University",
+            "credential_id": "UP96UT2VPUSC",
+            "issued": "Jun 2018",
+            "skills": [
+                "Python",
+                "Data Structure and Algorithms"
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "name": "Caring Turtlebot (CT-bot): A Step Towards Affordable Assistive Robotics",
+            "date": "May 2022 - December 2022",
+            "description": "The Caring Turtlebot (CT-bot) project aims to develop an affordable assistive robot to aid healthcare professionals by automating routine tasks, such as delivering items within medical facilities. Utilizing advanced computer vision and natural language processing algorithms, CT-bot is designed for non-expert users, enabling seamless human-robot interaction through simple voice commands. The system involves creating semantic maps of indoor environments, recognizing room and facility signs, and navigating autonomously while avoiding obstacles. Tested at the University of Maryland's Iribe Center, the CT-bot demonstrates reliable task execution, enhancing efficiency and reducing workload for healthcare providers.",
+            "link": "https://docs.google.com/document/d/1cm49Ft2-fFIo7IKSRknDDJceVmzNt5yLs86CZ9X6yyk/edit?usp=sharing",
+            "skills": [
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Robotics",
+                "Python"
+            ],
+            "picture": "ctbot.png"
+        },
+        {
+            "name": "Who's deceiving? An investigation into making multi-agent coordination robust to adversarial spoofing.",
+            "date": "May 2021 - August 2021",
+            "description": "The project explores the robustness of multi-agent systems against adversarial attacks. Focusing on a multi-robot rendezvous problem, the study investigates how a malicious agent can disrupt the coordination of benign agents aiming to converge at a common point. Using reinforcement learning (RL), specifically policy gradients and Generative Adversarial Network (GAN) techniques, the research develops an undetectable malicious agent capable of delaying the convergence of benign agents. Implemented in an OpenAI Gym environment, the project utilizes neural networks to train the malicious agent to maximize its disruptive potential while appearing benign. Through extensive experimentation, the study demonstrates the effectiveness of RL in creating resilient adversarial strategies, contributing valuable insights into the security challenges of multi-agent systems. The project highlights the intersection of robotics, machine learning, and cybersecurity, paving the way for future research on safeguarding multi-agent coordination.",
+            "link": "https://docs.google.com/document/d/1t09sby2DtjNzUYM7CkJnZaZXBQpVvuiySO6u2SITJrg/edit?usp=sharing",
+            "skills": [
+                "Robotics",
+                "Python",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Cybersecurity"
+            ],
+            "picture": "convergence.png"
+        },
+        {
+            "name": "Interactive Visualization and Clustering of COVID-19 Case Data",
+            "date": "August 2020 - February 2021",
+            "description": "The project aims to create a web-based tool that provides dynamic visualizations of COVID-19 cases and deaths across the United States. Utilizing data from the New York Times and the United States Census Bureau, the tool leverages Python and Dash by Plotly to allow users to interact with and analyze COVID-19 trends at the county level. The project incorporates machine learning, specifically k-means clustering, to group counties with similar case rates, offering a deeper understanding of the pandemic's progression. Users can explore daily and cumulative case trends, compare county clusters, and make informed decisions based on the visualized data.",
+            "link": "https://docs.google.com/document/d/1SOi53j_M-2XCj95Ic7lyVmiX6Q3ufJBPrNUTs-JDgf8/edit?usp=sharing",
+            "skills": [
+                "Python",
+                "Data Visualization",
+                "Artificial Intelligence",
+                "Machine Learning",
+                "Data Analysis",
+                "Statistics",
+                "Advanced Analytics"
+            ],
+            "picture": "coviddv.png"
+        }
+    ],
+  "courses": {
+    "spring_2024": [
+      {
+        "name": "BUS-S 307: Database Design & Management",
+        "semester": "Spring 2024",
+        "description": "I learned the entire lifecycle of data management, including eliciting data requirements, conceptual and logical design, and database implementation and use. I gained an understanding of database concepts and learned how to use database systems to solve business problems.",
+        "skills": ["Database Management", "SQL"]
+      },
+      {
+        "name": "BUS-K 303: Technology & Business Analysis",
+        "semester": "Spring 2024",
+        "description": "I learned how technology enables and empowers business decision-making. I gained insight into applying technology tools to prepare, analyze, model, and display business information.",
+        "skills": ["Technology & Business Analysis", "Microsoft Excel"]
+      },
+      {
+        "name": "ECON-E 370: Statistical Analysis for Business and Economics",
+        "semester": "Spring 2024",
+        "description": "I learned how technology enables and empowers business decision-making. I gained skills in preparing, analyzing, modeling, and displaying business information using technology tools.",
+        "skills": ["Statistics", "Advanced Analytics", "Microsoft Excel"]
+      },
+      {
+        "name": "BUS-C 104: Business Presentations",
+        "semester": "Spring 2024",
+        "description": "I learned how to deliver audience-centered messages, work effectively in teams, and develop strong communication skills for business settings. As part of the course, I worked on a project for FUNDAP, where we focused on raising awareness and support for girls' education in Guatemala.",
+        "skills": ["Presentation", "Communication", "Strategic Consulting"]
+      },
+      {
+        "name": "BUS-A 100: Introductory Accounting Principles and Analysis",
+        "semester": "Spring 2024",
+        "description": "I learned about the preparation and use of accounting information in business decision-making. I gained insights into managerial accounting, financial accounting, tax accounting, and auditing.",
+        "skills": ["Financial Accounting", "Managerial Accounting"]
+      },
+      {
+        "name": "BUS-T 144: Jellison LLC Hot Topics - Technology Innovation and Innovators",
+        "semester": "Spring 2024",
+        "description": "I explored the connection between outside interests and business. I gained insights into creative thinking and explored the intersection of technology and business.",
+        "skills": ["Professional Development", "Networking"]
+      },
+      {
+        "name": "PSY-P 101: Introductory Psychology 1",
+        "semester": "Spring 2024",
+        "description": "I learned about psychology methods, data, and theoretical interpretations. I gained insights into learning, sensory psychology, and psychophysiology.",
+        "skills": ["Psychology"]
+      }
+    ],
+    "fall_2023": [
+      {
+        "name": "BUS-K 201: The Computer in Business",
+        "semester": "Fall 2023",
+        "description": "I learned about data management, information technology, and information systems. I gained hands-on experience working with relational databases, data analysis applications, and fundamental concepts in information technology and systems.",
+        "skills": ["Microsoft Access", "Microsoft Excel"]
+      },
+      {
+        "name": "ECON-B 251: Fundamentals of Economics for Business",
+        "semester": "Fall 2023",
+        "description": "I learned about economic concepts including cost, trade, economic growth, consumer and firm behavior, taxation, externalities, moral hazard, adverse selection, and game theory.",
+        "skills": ["Microeconomics"]
+      },
+      {
+        "name": "BUS-T 175: Kelley Compass 1",
+        "semester": "Fall 2023",
+        "description": "I learned to identify and present myself through reviewing interest and skills inventories, analyzing cultural and ethical influences, reflecting on values and priorities, and setting personal and professional goals.",
+        "skills": ["Professional Development",  "Networking"]
+      },
+      {
+        "name": "BUS–T 134: Jellison LLC Community Development",
+        "semester": "Fall 2023",
+        "description": "I learned to tie together personal, academic, and professional aspects of development. I set personal, academic, and professional goals while gaining confidence and interpersonal skills necessary to connect with peers, professors, and business professionals.",
+        "skills": ["Professional Development"]
+      },
+      {
+        "name": "MSCH-C 213: Introduction to Media Psychology",
+        "semester": "Fall 2023",
+        "description": "I learned about the construction of social meaning associated with mediated messages. I explored the uses and consequences of exposure to mediated messages in various contexts.",
+        "skills": ["Media Analysis", "Psychology"]
+      },
+      {
+        "name": "SOAD-S 290: Photography I",
+        "semester": "Fall 2023",
+        "description": "I learned the basic practice of digital camera operation, exposure calculation, image file management, image optimization, and digital printing. I received guidance toward the establishment of a personal photographic aesthetic.",
+        "skills": ["Photography"]
+      },
+      {
+        "name": "BUS-X 170: How Business Works",
+        "semester": "Fall 2023",
+        "description": "I learned about real and contemporary business organizations, products, and issues. I focused on decision-making and integration across various business functions.",
+        "skills": ["Business Analysis"]
+      }
+    ],
+    "fall_2024": [
+      {
+        "name": "BUS-L 201: Legal Environment of Business",
+        "semester": "Fall 2024",
+        "description": "I explored the basics of business law, focusing on key areas like torts, contracts, and government regulations. This course gave me a solid understanding of how the law affects business decisions.",
+        "skills": ["Business Law", "Legal Analysis"]
+      },
+      {
+        "name": "BUS-A 304: Financial Reporting & Analysis",
+        "semester": "Fall 2024",
+        "description": "I learned how businesses report financial information to external parties, gaining the ability to read, analyze financial statements, and use this data for decision-making.",
+        "skills": ["Financial Accounting"]
+      },
+      {
+        "name": "ECON-B 252: Fundamentals of Economics for Business II",
+        "semester": "Fall 2024",
+        "description": "I studied macroeconomics, focusing on topics like national income, economic cycles, fiscal and monetary policy, and how globalization shapes business and trade. The class also emphasized understanding economic indicators and their role in real-world decision-making.",
+        "skills": ["Macroeconomics", "Globalization Awareness"]
+      },
+      {
+        "name": "BUS-C 204: Business Writing",
+        "semester": "Fall 2024",
+        "description": "I improved my business writing skills, focusing on creating clear, organized, and professional documents for various business contexts, while working on a strategic consulting project for Proozy to develop actionable recommendations for business growth and operational efficiency.",
+        "skills": ["Business Writing", "Communication", "Strategic Consulting", "Presentation"]
+      },
+      {
+        "name": "BUS-D 270: The Global Business Environments",
+        "semester": "Fall 2024",
+        "description": "I explored how global forces shape business strategies, gaining insight into complexities of global business environments.",
+        "skills": ["Global Market Analysis", "Globalization"]
+      },
+      {
+        "name": "BUS-T 275: Kelley Compass 2",
+        "semester": "Fall 2024",
+        "description": "I enhanced my teamwork and leadership abilities through managing team dynamics, handling ethical dilemmas, and practicing professional etiquette.",
+        "skills": ["Teamwork", "Leadership", "Professional Development",  "Networking"]
+      },
+      {
+        "name": "PSY-P 102: Introductory Psychology 2",
+        "semester": "Fall 2024",
+        "description": "I studied developmental, social, personality, and abnormal psychology, enhancing my understanding of human behavior in personal and professional settings.",
+        "skills": ["Psychology"]
+      }
+    ]
+  }
+}

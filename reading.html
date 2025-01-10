@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Nanda - What I'm Reading</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        main h1 {
+            font-size: 250%;
+            text-align: center;
+        }
+
+        body {
+            background-color: #f8bcd0;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #f8bcd0;
+        }
+
+        header .nav-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header .nav-toggle {
+                display: block;
+                font-size: 2rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #ef6292;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 8px 8px;
+            }
+
+            header nav ul li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            header nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            header nav ul li a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+                color: white;
+                border-radius: 0;
+            }
+
+            header.nav-active ul {
+                display: flex;
+                animation: dropdown-slide 0.3s ease-in-out forwards;
+            }
+        }
+
+        @keyframes dropdown-slide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+        .main-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .reading-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background-color: #ffffff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .reading-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .reading-box img {
+            width: 20%;
+            height: auto;
+            border-radius: 2px;
+            object-fit: cover;
+        }
+
+        .reading-content {
+            flex: 1;
+        }
+
+        .reading-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .reading-description p {
+            margin: 0 0 1rem;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tags button {
+            background-color: #ef6292;
+            color: white;
+            border: none;
+            border-radius: 20px;
+            padding: 0.5rem 1rem;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tags button:hover {
+            background-color: #ea3473;
+        }
+
+        footer {
+            background-color: #ef6292;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #FB8DA0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .reading-box {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .reading-box img {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .tags {
+                justify-content: center;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .main-container {
+                width: 100%;
+                padding: 1rem;
+            }
+
+            footer p {
+                padding: 1rem;
+            }
+        }
+        
+        .title-link {
+            text-decoration: none;
+            color: #ef6292;
+            font-weight: bold;
+            font-size: 1.4rem;
+            line-height: 1.4;
+        }
+
+        .title-link:hover {
+            text-decoration: underline;
+            color: #ea3473;
+        }
+
+        .reading-header div:last-child {
+            white-space: nowrap;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SN-whitetext.png" alt="Shivani Nanda Logo">
+            <span>Shivani Nanda</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="campus-involvement.html">Involvement</a></li>
+                <li><a href="coursework.html">Coursework</a></li>
+                <li><a href="online-courses.html">Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="reading.html">What I'm Reading</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-container">
+            <h1>What I'm Reading</h1>
+            <center><p>Dive into the articles, insights, and stories that inspire me!</p></center>
+            <br>
+            <div class="reading-box">
+                <img src="im-02574586.avif" alt="Article Image">
+                <div class="reading-content">
+                    <div class="reading-header">
+                        <div>
+                            <a href="https://www.wsj.com/opinion/banning-tiktok-wont-solve-your-data-security-problem-supreme-court-case-869877cd?mod=tech_trendingnow_opn_pos4&mod=hp_opin_pos_3" target="_blank" class="title-link">
+                                TikTok Ban: The Security Fix That Fixes Nothing
+                                <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.9rem;"></i>
+                            </a>
+                        </div>
+                        <div>January 7, 2025</div>
+                    </div>
+                    <div class="reading-description">
+                        <p>Banning TikTok might seem like a bold move, but it won’t solve the larger data-security problem. While concerns about ByteDance’s ties to the Chinese government are valid, Google and Meta collect far more data on Americans than TikTok ever has. The real issue lies in the broader ecosystem of tech companies and data brokers trading personal information without adequate regulation. Misinformation and propaganda are also cited as reasons for a ban, but these are problems across all social media platforms, not just TikTok. Instead of focusing on one app, Congress should prioritize comprehensive digital privacy laws to address the root of the issue. Targeting TikTok alone feels more like a distraction than a solution.</p>
+                    </div>
+                    <div class="tags">
+                        <button>Data Privacy</button>
+                        <button>Digital Security</button>
+                        <button>Social Media Regulation</button>
+                        <button>Congress and Tech</button>
+                    </div>
+                </div>
+            </div>
+            <div class="reading-box">
+                <img src="im-844745-2.avif" alt="Article Image">
+                <div class="reading-content">
+                    <div class="reading-header">
+                        <div>
+                            <a href="https://www.wsj.com/podcasts/take-on-the-week/goldman-sachs-economist-jan-hatzius-on-his-2025-economic-outlook/0b763eff-2edc-43ed-965c-cd3c5c52862d" target="_blank" class="title-link">
+                                Jan Hatzius on 2025: Balancing Growth, Risks, and Holiday Cheer
+                                <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.9rem;"></i>
+                            </a>
+                        </div>
+                        <div>December 22, 2024</div>
+                    </div>
+                    <div class="reading-description">
+                        <p>Jan Hatzius, Goldman Sachs’ chief economist, is optimistic about 2025, projecting steady growth of 2.5% despite challenges like increased tariffs and reduced immigration. He emphasizes that strong income gains and easing inflation will help the economy remain on track, even as policy changes create uncertainty. His analysis underscores the balance between risks and resilience in today’s economic landscape. In a lighter moment, Hatzius joked about the inefficiency of holiday gifting, blending humor with his usual sharp insights. His thoughtful take on what lies ahead offers both clarity and perspective as we enter the new year.</p>
+                    </div>
+                    <div class="tags">
+                        <button>Economic Outlook 2025</button>
+                        <button>Wealth Effect</button>
+                        <button>Inflation Trends</button>
+                        <button>Holiday Economics</button>
+                        <button>Tariffs and Trade</button>
+                    </div>
+                </div>
+            </div>
+            <div class="reading-box">
+                <img src="121124article.avif" alt="Article Image">
+                <div class="reading-content">
+                    <div class="reading-header">
+                        <div>
+                            <a href="https://www.wsj.com/business/retail/macys-m-q3-earnings-report-2024-c7363662?mod=hp_lead_pos10" target="_blank" class="title-link">
+                                Macy’s Probe Found Employee Acted Alone in $151 Million Accounting Scandal
+                                <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.9rem;"></i>
+                            </a>
+                        </div>
+                        <div>December 11, 2024</div>
+                    </div>
+                    <div class="reading-description">
+                        <p>Macy’s recent $151 million accounting scandal is a reminder of how even one unchecked mistake can spiral out of control. An employee’s error in tracking delivery expenses, followed by years of falsified records, delayed financial reports and shook investor confidence. The fallout has forced Macy’s to lower its profit expectations and focus on damage control, like strengthening internal systems and doubling down on its top-performing stores. It’s a tough lesson in accountability and oversight, and it raises questions about how such a large-scale issue went unnoticed for so long—even by the company’s auditor.</p>
+                    </div>
+                    <div class="tags">
+                        <button>Corporate Accountability</button>
+                        <button>Financial Oversight</button>
+                        <button>Retail Strategy</button>
+                        <button>Accounting Errors</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reading-box">
+                <img src="121024article.avif" alt="Article Image">
+                <div class="reading-content">
+                    <div class="reading-header">
+                        <div>
+                            <a href="https://www.wsj.com/business/nvidia-jensen-huang-book-advice-b9794576?mod=hp_featst_pos3" target="_blank" class="title-link">
+                                The Secrets of the Man Who Made Nvidia the World’s Most Valuable Company
+                                <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.9rem;"></i>
+                            </a>
+                        </div>
+                        <div>December 10, 2024</div>
+                    </div>
+                    <div class="reading-description">
+                        <p>Jensen Huang, Nvidia’s CEO, has a unique way of staying connected to every corner of his company: T5T emails. These "Top-5 Things" updates from employees help him cut through bureaucracy and spot trends early, like the AI boom that propelled Nvidia’s rise. His relentless work ethic and focus on ground-level insights have created a culture of transparency and agility, making the company one of the most innovative in the world. It’s a simple yet powerful reminder that sometimes the best ideas come from listening to everyone, not just the top executives.</p>
+                    </div>
+                    <div class="tags">
+                        <button>Leadership Strategies</button>
+                        <button>Workplace Culture</button>
+                        <button>Transparency in Business</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="reading-box">
+                <img src="120924article.avif" alt="Article Image">
+                <div class="reading-content">
+                    <div class="reading-header">
+                        <div>
+                            <a href="https://www.wsj.com/articles/why-the-coolest-job-in-tech-might-actually-be-in-a-bank-274330c5?mod=hp_lista_pos1" target="_blank" class="title-link">
+                                Why the Coolest Job in Tech Might Actually Be in a Bank
+                                <i class="fas fa-external-link-alt" style="margin-left: 5px; font-size: 0.9rem;"></i>
+                            </a>
+                        </div>
+                        <div>December 9, 2024</div>
+                    </div>
+                    <div class="reading-description">
+                        <p>Banks are increasingly hiring tech talent for projects in AI and machine learning, focusing on innovation and research. Banks are pulling out all the stops—patent-worthy projects, cutting-edge AI work, and collaborations with top researchers—to attract tech talent. Throw in job stability, solid pay, and the chance to work on game-changing innovations, and it’s easy to see why so many are lining up for these roles.</p>
+                    </div>
+                    <div class="tags">
+                        <button>FinTech</button>
+                        <button>Artificial Intelligence</button>
+                        <button>Machine Learning</button>
+                        <button>Research & Development</button>
+                        <button>Technology Careers</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="mailto:nandash@iu.edu" title="Send Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/shivaninanda2027/" target="_blank" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p>Thank you for viewing my portfolio! Please feel free to email me or connect with me on LinkedIn!</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.createElement('button');
+            navToggle.classList.add('nav-toggle');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            const header = document.querySelector('header');
+            const nav = header.querySelector('nav');
+            header.appendChild(navToggle);
+            navToggle.addEventListener('click', () => {
+                header.classList.toggle('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>

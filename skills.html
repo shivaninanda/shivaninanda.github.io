@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Nanda - Skills</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <style>
+        body, h1, h2, h3, p {
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        main h1 {
+            font-size: 250%;
+        }
+
+        body {
+            background-color: #f8bcd0;
+            color: #333;
+            font-size: 1rem;
+            line-height: 1.6;
+            padding: 0;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header {
+            background-color: #ef6292;
+            padding: 1rem 0;
+            color: white;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header .logo img {
+            width: 60px;
+            vertical-align: middle;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        header nav ul li {
+            margin: 0 1.5rem;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        header nav ul li a:hover {
+            color: #f8bcd0;
+        }
+
+        header .nav-toggle {
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            header .nav-toggle {
+                display: block;
+                font-size: 2rem;
+                color: white;
+                background: none;
+                border: none;
+                cursor: pointer;
+                position: absolute;
+                top: 50%;
+                right: 1rem;
+                transform: translateY(-50%);
+                z-index: 1001;
+            }
+
+            header nav ul {
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                background-color: #ef6292;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                border-radius: 0 0 8px 8px;
+            }
+
+            header nav ul li {
+                width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            }
+
+            header nav ul li:last-child {
+                border-bottom: none;
+            }
+
+            header nav ul li a {
+                padding: 1rem;
+                width: 100%;
+                text-align: left;
+                color: white;
+                border-radius: 0;
+            }
+
+            header.nav-active ul {
+                display: flex;
+                animation: dropdown-slide 0.3s ease-in-out forwards;
+            }
+        }
+
+        @keyframes dropdown-slide {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .main-container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 2rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+
+        .box-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .box {
+            background-color: #f3f3f3;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            color: #333;
+            padding: 1rem;
+            flex: 1 1 calc(100%% - 20px);
+            max-width: calc(100% - 20px);
+            min-height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @media (max-width: 768px) {
+            .box {
+                flex: 1 1 calc(50% - 20px);
+                max-width: calc(50% - 20px);
+            }
+            footer p {
+                padding: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .box {
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+        }
+
+
+        .box h3 {
+            font-size: 1.4rem;
+            color: #ef6292;
+            margin-bottom: 10px;
+        }
+
+        .box p {
+            font-size: 0.9rem;
+        }
+
+        .box p strong {
+            color: #555;
+        }
+
+        .box a {
+            color: #0073e6;
+            text-decoration: underline;
+        }
+
+        .box a:hover {
+            color: #005bb5;
+        }
+
+        .box .category {
+            font-size: 1rem;
+            color: #ef6292;
+            font-weight: bold;
+        }
+
+        .box .highlighted-skill {
+            color: #44a0e6;
+            font-weight: bold;
+        }
+
+        .skills-buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .skills-button {
+            background-color: #ef6292;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .skills-button:hover {
+            background-color: #ea3473;
+            transform: translateY(-2px);
+        }
+
+        .skills-button:active {
+            transform: translateY(1px);
+        }
+
+        footer {
+            background-color: #ef6292;
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: white;
+            margin: 0 1rem;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        footer a:hover {
+            color: #FB8DA0;
+        }
+
+        footer p {
+            font-size: 1rem;
+            margin-top: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="SN-whitetext.png" alt="Shivani Nanda Logo">
+            <span>Shivani Nanda</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="campus-involvement.html">Involvement</a></li>
+                <li><a href="coursework.html">Coursework</a></li>
+                <li><a href="online-courses.html">Certifications</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="reading.html">What I'm Reading</a></li>
+                <li><a href="photography.html">Photography</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="main-container">
+            <h1>Skills</h1>
+            <p>Click on any of the skills buttons below to explore where I’ve applied these skills or how I’ve developed them.</p>
+            <input type="text" id="search-bar" placeholder="Search skills..." style="padding: 10px; margin-bottom: 20px; width: 100%; max-width: 400px; border-radius: 5px; border: 1px solid #ddd;">
+            <h2 id="current-skill" style="text-align: center; color: #555; margin-top: 20px;"></h2>
+            <div id="skills-buttons-container" class="skills-buttons-container"></div>
+            <div id="box-container" class="box-container" style="width: 100%; display: flex; flex-wrap: wrap; justify-content: left;"></div>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <a href="mailto:nandash@iu.edu" title="Send Email">
+                <i class="fas fa-envelope"></i> Email
+            </a>
+            <a href="https://www.linkedin.com/in/shivaninanda2027/" target="_blank" title="Connect on LinkedIn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+        <p>Thank you for viewing my portfolio! Please feel free to email me or connect with me on LinkedIn!</p>
+    </footer>
+
+    <script>
+        let allBoxes;
+        let skills;
+
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('boxes.json')
+                .then(response => response.json())
+                .then(data => {
+                    const experience = data.experience || [];
+                    const involvement = data.involvement || [];
+                    const courses = [
+                      ...(data.courses.spring_2024 || []), 
+                      ...(data.courses.fall_2023 || []), 
+                      ...(data.courses.fall_2024 || [])
+                    ];
+                    const onlineCourses = data.online_courses || [];
+                    const projects = data.projects || [];
+                    allBoxes = [...experience, ...involvement, ...courses, ...onlineCourses, ...projects];
+
+                    const skillSet = new Set();
+                    allBoxes.forEach(box => {
+                        (box.skills || []).forEach(skill => skillSet.add(skill));
+                    });
+
+                    skills = Array.from(skillSet).sort();
+                    populateSkillsButtons(skills);
+
+                    function populateSkillsButtons(skills) {
+                        const skillsButtonsContainer = document.getElementById('skills-buttons-container');
+                        skillsButtonsContainer.innerHTML = '';
+                        skills.forEach(skill => {
+                            const button = document.createElement('button');
+                            button.textContent = skill;
+                            button.classList.add('skills-button');
+                            button.addEventListener('click', () => filterBoxesBySkill(skill));
+                            skillsButtonsContainer.appendChild(button);
+                        });
+                    }
+                })
+                .catch(error => console.error('Error fetching JSON data:', error));
+
+            function filterBoxesBySkill(skill) {
+                const boxContainer = document.getElementById('box-container');
+                const currentSkillHeading = document.getElementById('current-skill');
+                boxContainer.innerHTML = '';
+                if (skill) {
+                    currentSkillHeading.style.display = "block";
+                    currentSkillHeading.textContent = `Currently Displaying: ${skill}`;
+                } else {
+                    currentSkillHeading.style.display = "none";
+                }
+
+                if (!skill) return;
+
+                const filteredBoxes = allBoxes.filter(box => (box.skills || []).includes(skill));
+                filteredBoxes.forEach(box => {
+                    const boxElement = document.createElement('div');
+                    boxElement.classList.add('box');
+                    boxElement.innerHTML = generateBoxHTML(box);
+                    boxContainer.appendChild(boxElement);
+                });
+
+                document.querySelectorAll('.skills-button').forEach(button => {
+                    button.style.backgroundColor = button.textContent === skill ? '#ea3473' : '#ef6292';
+                });
+            }
+
+            function generateBoxHTML(box, skill) {
+                const category = categorizeBox(box);
+                let boxHTML = `<h3>${box.title || box.name}</h3><p><strong>Category:</strong> ${category}</p>`;
+
+                if (category === 'Course') {
+                    boxHTML += `
+                        <p><strong>Course Name:</strong> ${box.name}</p>
+                        <p><strong>Semester:</strong> ${box.semester}</p>
+                        <p><strong>Description:</strong> ${box.description}</p>
+                        <p><strong>Skills:</strong> ${box.skills.join(', ')}</p>
+                    `;
+                } else if (category === 'Certification') {
+                    boxHTML += `
+                        <p><strong>Certification Name:</strong> ${box.name}</p>
+                        <p><strong>Provider:</strong> ${box.provider}</p>
+                        <p><strong>Credential ID:</strong> ${box.credential_id || 'N/A'}</p>
+                        <p><strong>Date Issued:</strong> ${box.issued}</p>
+                        <p><strong>Skills:</strong> ${box.skills.join(', ')}</p>
+                    `;
+                } else if (category === 'Project') {
+                    boxHTML += `
+                        <p><strong>Project Name:</strong> ${box.name}</p>
+                        <p><strong>Date:</strong> ${box.date}</p>
+                        <p><strong>Description:</strong> ${box.description}</p>
+                        <p><strong>Link:</strong> ${box.link ? `<a href="${box.link}" target="_blank">${box.link}</a>` : 'N/A'}</p>
+                        <p><strong>Skills:</strong> ${box.skills.join(', ')}</p>
+                    `;
+                } else if (category === 'Professional Experience' || category === 'Campus Involvement') {
+                    boxHTML += `
+                        <p><strong>Title:</strong> ${box.title}</p>
+                        <p><strong>Date:</strong> ${box.date}</p>
+                        <p><strong>Description:</strong> ${box.description}</p>
+                        <p><strong>Skills:</strong> ${box.skills.join(', ')}</p>
+                    `;
+                } else {
+                    boxHTML += `
+                        <p><strong>Date:</strong> ${box.date || 'N/A'}</p>
+                        <p><strong>Description:</strong> ${box.description || 'No description available.'}</p>
+                    `;
+                }
+                return boxHTML;
+            }
+
+            function categorizeBox(box) {
+                if (box.link) return 'Project';
+                if (box.provider) return 'Certification';
+                if (box.semester) return 'Course';
+                if (box.skills && box.skills.length > 0) {
+                    const isInvolvement = ['President', 'Vice President', 'Active Member'].some(role => box.title?.includes(role));
+                    return isInvolvement ? 'Campus Involvement' : 'Professional Experience';
+                }
+                return 'Other';
+            }
+
+
+            const searchBar = document.getElementById('search-bar');
+            searchBar.addEventListener('input', () => {
+                const searchTerm = searchBar.value.toLowerCase().trim();
+                const filteredSkills = skills.filter(skill => skill.toLowerCase().includes(searchTerm));
+
+                const skillsButtonsContainer = document.getElementById('skills-buttons-container');
+                skillsButtonsContainer.innerHTML = '';
+                filteredSkills.forEach(skill => {
+                    const button = document.createElement('button');
+                    button.textContent = skill;
+                    button.classList.add('skills-button');
+                    button.addEventListener('click', () => filterBoxesBySkill(skill));
+                    skillsButtonsContainer.appendChild(button);
+                });
+            });
+        });
+
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const navToggle = document.createElement('button');
+            navToggle.classList.add('nav-toggle');
+            navToggle.innerHTML = '<i class="fas fa-bars"></i>';
+            const header = document.querySelector('header');
+            const nav = header.querySelector('nav');
+            header.appendChild(navToggle);
+            navToggle.addEventListener('click', () => {
+                header.classList.toggle('nav-active');
+            });
+        });
+    </script>
+</body>
+</html>
